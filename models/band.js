@@ -4,12 +4,12 @@ const {
  } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Band extends Model {
-    static associate({MeetGreet, SetTimes}) {
+    static associate({MeetGreet, SetTime}) {
       Band.hasMany(MeetGreet, {
         foreignKey: "band_id",
         as: "meet_greets"
       })
-      Band.hasMany(SetTimes, {
+      Band.hasMany(SetTime, {
         foreignKey: "band_id",
         as: "set_times"
       })
